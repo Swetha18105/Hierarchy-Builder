@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hierarchy Builder</title>
+<link rel="icon" type="image/png" href="assets/logo.png.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="document-page">
+    <header class="page-header">
+        <div class="brand">
+            <img class="brand-logo" src="assets/logo.png.png" alt="Hierarchy Builder logo">
+            <h1>Hierarchy Builder</h1>
+        </div>
+        <p class="page-subtitle">Paste request JSON, generate the API response, and preview the formatted output in one place.</p>
+    </header>
+
+    <section class="doc-section">
+        <div class="section-heading">
+            <h2>Request</h2>
+            <span class="section-badge">JSON Input</span>
+        </div>
+        <div class="code-panel">
+            <textarea id="inputData" spellcheck="false" placeholder='{
+  "data": [
+    "A->B", "A->C", "B->D", "C->E", "E->F",
+    "X->Y", "Y->Z", "Z->X"
+  ]
+}'></textarea>
+        </div>
+        <p class="helper-text">You can paste either full JSON like the example above or comma-separated values such as <code>A->B, A->C</code>.</p>
+        <div class="toolbar">
+            <button id="sampleBtn" type="button">Load Sample</button>
+            <button id="submitBtn" type="button" onclick="submitData()">Generate Response</button>
+        </div>
+        <div id="error" class="error"></div>
+    </section>
+
+    <section class="doc-section">
+        <div class="section-heading">
+            <h2>Response</h2>
+            <span id="statusPill" class="section-badge status-badge">Ready</span>
+        </div>
+        <div id="output" class="code-panel output-panel">
+            <pre>{
+  "user_id": "swetha_01012000",
+  "email_id": "your_email@srmist.edu.in",
+  "college_roll_number": "YOUR_ROLL",
+  "hierarchies": []
+}</pre>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
