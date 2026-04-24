@@ -186,6 +186,12 @@ app.post("/bfhl", (req, res) => {
     });
 });
 
+app.get("/bfhl", (req, res) => {
+    res.json({
+        status: "Server is running"
+    });
+});
+
 app.listen(PORT, () => {
     console.log("Server running on port " + PORT);
 });
