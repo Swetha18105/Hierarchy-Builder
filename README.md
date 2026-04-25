@@ -1,4 +1,4 @@
-# 🌳 Hierarchy Builder
+#  Hierarchy Builder
 
 A full-stack web application that processes hierarchical relationships and generates structured output from given input data.
 
